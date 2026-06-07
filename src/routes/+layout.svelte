@@ -1,11 +1,14 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import ThemeSwap from './ThemeSwap.svelte';
-	import {onMount} from 'svelte';
+	import ThemeSwap from '$lib/ThemeSwap.svelte';
+	import { Menu, X } from '@lucide/svelte';
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
-	let activeSelection = $state('');
+	let menuOpen = $state(false);
+	let visible = $state(true);
+	let lastScrollY = $state(0);
 	const links = [
 		{ href: '#about', label: 'Om Mig' },
 		{ href: '#experience', label: 'Erfaring' },
@@ -14,49 +17,75 @@
 	];
 
 	onMount(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				for (const entry of entries) {
-					if (entry.isIntersecting) {
-						activeSelection = entry.target.id;
-					}
-				}
-			},
-			{ threshold: 0.5 }
-		);
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+			visible = currentScrollY < lastScrollY || currentScrollY < 50;
+			lastScrollY = currentScrollY;
+		};
 
-		document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
-		return () => observer.disconnect();
+		window.addEventListener('scroll', handleScroll, { passive: true });
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
 	});
+
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<header id="header">
-	<div id="navbar" class="navbar bg-base-200 sticky top-0 z-50">
-		<div class="navbar-start">
-			<span class="font-semibold">Victor Woydowski Dralle</span>
+<header class="fixed top-0 w-full z.50 transition-transform duration-300" id="header">
+
+	<div id="navbar" class="navbar bg-base-200/60 backdrop-blur-md border-b border-base-content/10">
+
+		<div class="navbar-start gap-2">
+			<span class="font-extrabold text-2xl">Victor Woydowski Dralle</span>
 		</div>
 
-		<div class="navbar-center">
-			<div class="flex flex-row  space-between">
+		<div class="navbar-center hidden sm:flex gap-2">
 			{#each links as link(link.href)}
-				<a class="btn btn-sm rounded-full text-lg" href={link.href}
-				class:button-active={activeSelection === link.href.slice(1)}>{link.label}</a>
+				<a href={link.href} class="btn btn-ghost btn-small rounded-full font-bold text-lg">{link.label}</a>
 			{/each}
+		</div>
+
+		<div class="navbar-end gap-2">
+			<button
+				class="btn btn-ghost bg-transparent sm:hidden"
+				onclick={() => menuOpen = !menuOpen}
+				aria-label="Toggle menu"
+			>
+				{#if menuOpen}
+					<X size={24} />
+				{:else}
+					<Menu size={24} />
+				{/if}
+			</button>
+
+			<div id="theme-switch" class="btn btn-ghost btn-small rounded-full">
+				<ThemeSwap />
 			</div>
+			
 		</div>
-
-		<div class="navbar-end">
-			<ThemeSwap />
-		</div>
-
 	</div>
+
+	{#if menuOpen}
+		<nav
+			class="sm:hidden bg-base-200/80 backdrop-blur-md border-b border-base-content/10 flex flex-col px-4 pb-4 gap-2">
+			{#each links as link (link.href)}
+				<a
+					class="btn btn-ghost rounded-full"
+					href={link.href}
+					onclick={() => menuOpen = false}
+				>{link.label}</a>
+			{/each}
+		</nav>
+	{/if}
+
 </header>
 
-<main>
+<main class="pt-16">
 	{@render children()}
 </main>
 

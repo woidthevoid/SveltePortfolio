@@ -1,3 +1,7 @@
+<div id="home" class="hero">
+
+</div>
+
 <section id="about">
 	<h1>Om mig</h1>
 

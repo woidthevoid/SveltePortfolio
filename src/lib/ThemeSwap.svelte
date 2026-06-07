@@ -1,5 +1,5 @@
 <label class="swap swap-rotate">
-	<input type="checkbox" class="theme-controller" value="dark" />
+	<input type="checkbox" class="theme-controller " value="dark" />
 
 	<!-- sun icon -->
 	<svg
