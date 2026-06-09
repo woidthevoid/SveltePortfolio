@@ -10,6 +10,7 @@
 	let visible = $state(true);
 	let lastScrollY = $state(0);
 	let showScrollTop = $state(false);
+	let currentSection = $state('Om Mig');
 	const links = [
 		{ href: '#about', label: 'Om Mig' },
 		{ href: '#experience', label: 'Erfaring' },
@@ -35,6 +36,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Victor Woydowski Dralle | {currentSection}</title>
 </svelte:head>
 
 <header class="fixed top-0 w-full z-50 transition-transform duration-300" id="header">
@@ -47,7 +49,7 @@
 
 		<div class="navbar-center hidden sm:flex gap-2">
 			{#each links as link (link.href)}
-				<a href={link.href} class="btn btn-ghost btn-small rounded-full font-bold text-lg">{link.label}</a>
+				<a href={link.href} onclick={() => currentSection = link.label} class="btn btn-ghost btn-small rounded-full font-bold text-lg">{link.label}</a>
 			{/each}
 		</div>
 
@@ -72,7 +74,7 @@
 			>
 				{#each links as link (link.href)}
 					<li>
-						<a href={link.href} class="font-bold" onclick={() => document.getElementById('nav-mobile-menu')?.hidePopover()}>
+						<a href={link.href} class="font-bold" onclick={() => {currentSection = link.label; document.getElementById('nav-mobile-menu')?.hidePopover();}}>
 							{link.label}
 						</a>
 					</li>
@@ -92,6 +94,7 @@
 	{@render children()}
 </main>
 
+<!--Button to scroll to top, showing when screen has been scrolled down-->
 {#if showScrollTop}
 	<button
 		transition:fade={{duration: 300}}
