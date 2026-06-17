@@ -2,17 +2,18 @@
 	// @ts-ignore
 	import profile from '$lib/assets/me.JPG';
 	import { GraduationCap, User, MapPin, Briefcase } from '@lucide/svelte';
+	import * as m from "$lib/paraglide/messages";
 
 	/* listContent represents data used for the about me section with titles, icons and content */
 	const listContent = [
-		{ icon: User, title: 'Navn: ', content: 'Victor Woydowski Dralle' },
+		{ icon: User, title: m.hero_name(), content: 'Victor Woydowski Dralle' },
 		{
 			icon: GraduationCap,
-			title: 'Uddannelse: ',
-			content: 'Diplomingeniør i Softwareteknologi, SDU Odense'
+			title: m.hero_education(),
+			content: m.hero_eduname()
 		},
-		{ icon: Briefcase, title: 'Erfaring: ', content: 'Fullstack Webudvikler, AirPlate' },
-		{ icon: MapPin, title: 'Lokation: ', content: 'Odense, Fyn, Danmark' }
+		{ icon: Briefcase, title: m.hero_experience(), content: m.hero_experience_content() },
+		{ icon: MapPin, title: m.hero_location(), content: m.hero_location_name() }
 	];
 </script>
 
@@ -56,28 +57,18 @@
 				</div>
 
 				<div class="flex flex-1 flex-col gap-4 text-base leading-relaxed">
-					<p>
-						Hej! Jeg hedder <strong>Victor</strong> og er en passioneret softwareingeniørstuderende
-						fra Odense. Jeg studerer til diplomingeniør i Softwareteknologi på SDU og arbejder
-						sideløbende som fullstack webudvikler hos AirPlate, hvor jeg bygger moderne webapplikationer
-						fra ende til anden.
-					</p>
-					<p>
-						Jeg brænder for at skabe brugervenlige og tilgængelige løsninger, der kombinerer
-						et stærkt teknisk fundament med et æstetisk blik. Hvad enten det er en snappy
-						REST API i Go eller et responsivt SvelteKit-frontend med DaisyUI, trives jeg bedst
-						når teknologi og design mødes.
-					</p>
-					<p>
-						Uden for koden finder du mig sandsynligvis med en kop kaffe, fordybet i et nyt
-						sideprojekt eller på udkig efter det næste spændende problem at løse.
-					</p>
+					<p>{@html m.about_intro()}</p>
+					<p>{m.about_passion()}</p>
+					<p>{m.about_hobbies()}</p>
 
-					<div class="mt-2 flex flex-wrap gap-3" aria-label="Teknologier jeg arbejder med">
-						{#each ['SvelteKit', 'TypeScript', 'Go', 'Tailwind CSS', 'PostgreSQL', 'Docker'] as tech}
-							<span class="badge badge-primary badge-outline font-mono text-xs">{tech}</span>
-						{/each}
+					<div>
+						<div aria-label="download resume" class="btn btn-primary rounded-3xl text-bold ">
+							<a href="/hello.txt" download>
+								{m.resume_button()}
+							</a>
 					</div>
+					</div>
+
 				</div>
 			</div>
 		</div>

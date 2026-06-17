@@ -5,6 +5,7 @@
 	import ThemeSwap from '$lib/ThemeSwap.svelte';
 	import { Menu, ArrowUp } from '@lucide/svelte';
 	import { onMount } from 'svelte';
+	import * as m from '$lib/paraglide/messages';
 
 	let { children } = $props();
 	let visible = $state(true);
@@ -12,10 +13,10 @@
 	let showScrollTop = $state(false);
 	let currentSection = $state('Om Mig');
 	const links = [
-		{ href: '#about', label: 'Om Mig' },
-		{ href: '#experience', label: 'Erfaring' },
-		{ href: '#projects', label: 'Projekter' },
-		{ href: '#contacts', label: 'Kontakt' }
+		{ href: '#about', label: m.nav_about() },
+		{ href: '#experience', label: m.nav_experience() },
+		{ href: '#projects', label: m.nav_projects() },
+		{ href: '#contacts', label: m.nav_contact() }
 	];
 
 	onMount(() => {

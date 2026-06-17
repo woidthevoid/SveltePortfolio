@@ -1,0 +1,19 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"nav_about": "Om mig",
+	"nav_experience": "Erfaring",
+	"nav_projects": "Projekter",
+	"nav_contact": "Kontakt",
+	"hero_name": "Navn",
+	"hero_education": "Uddannelse",
+	"hero_eduname": "Diplomingeniør i Softwareteknologi, SDU Odense",
+	"hero_experience": "Erfaring",
+	"hero_experience_content": "Fullstack Webudvikler @ AirPlate",
+	"hero_location": "Lokation",
+	"hero_location_name": "Odense, Fyn, Danmark",
+	"about_intro": "Hej! Jeg hedder <strong>Victor</strong> og er en passioneret softwareingeniørstuderende fra Odense. Jeg studerer til diplomingeniør i Softwareteknologi på SDU og arbejder sideløbende som fullstack webudvikler hos AirPlate, hvor jeg bygger moderne webapplikationer fra ende til anden.",
+	"about_passion": "Jeg brænder for at skabe brugervenlige og tilgængelige løsninger, der kombinerer et stærkt teknisk fundament med et æstetisk blik. Hvad enten det er en snappy REST API i Go eller et responsivt SvelteKit-frontend med DaisyUI, trives jeg bedst når teknologi og design mødes.",
+	"about_hobbies": "Uden for koden finder du mig sandsynligvis med en kop kaffe, fordybet i et nyt sideprojekt eller på udkig efter det næste spændende problem at løse.",
+	"hero_positions": "Jeg er pt. på udkig efter nye eventyr i form af roller som indeholder DevOps, Cloud, Infrastruktur og Webudvikling",
+	"resume_button": "Dowload mit CV her!"
+}
