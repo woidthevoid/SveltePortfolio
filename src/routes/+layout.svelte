@@ -3,15 +3,17 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import {fade} from 'svelte/transition';
 	import ThemeSwap from '$lib/ThemeSwap.svelte';
+	import LanguageSwap from '$lib/LanguageSwap.svelte';
 	import { Menu, ArrowUp } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 	import * as m from '$lib/paraglide/messages';
-
 	let { children } = $props();
 	let visible = $state(true);
 	let lastScrollY = $state(0);
 	let showScrollTop = $state(false);
-	let currentSection = $state('Om Mig');
+	let currentSection = $state(m.nav_about());
+
+	// TODO: Fix ThemeSwap to be small on mobile, navbar isnt full width on desktop
 	const links = [
 		{ href: '#about', label: m.nav_about() },
 		{ href: '#experience', label: m.nav_experience() },
@@ -42,10 +44,10 @@
 
 <header class="fixed top-0 w-full z-50 transition-transform duration-300" id="header">
 
-	<div id="navbar" class="navbar bg-base-200/60 backdrop-blur-md border-b border-base-content/10">
+	<div id="navbar" class="navbar glass">
 
 		<div class="navbar-start gap-2">
-			<span class="font-extrabold text-2xl">Victor Woydowski Dralle</span>
+			<a href="#hero" class="font-extrabold lg:text-2xl md:text-xl sm:text-xl">Victor Woydowski Dralle</a>
 		</div>
 
 		<div class="navbar-center hidden sm:flex gap-2">
@@ -82,8 +84,12 @@
 				{/each}
 			</ul>
 
-			<div id="theme-switch" class="btn btn-ghost btn-small rounded-full">
+			<div id="theme-switch" class="btn btn-ghost lg:btn-small">
 				<ThemeSwap />
+			</div>
+
+			<div id="language-switch">
+				<LanguageSwap />
 			</div>
 
 		</div>

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"nav_about": "About Me",
+	"nav_experience": "Experience",
+	"nav_projects": "Projects",
+	"nav_contact": "Contact",
+	"hero_greeting1": "Hi, ",
+	"hero_greeting2": "I",
+	"hero_greeting3": "am",
+	"hero_role1": "Fullstack Web Development",
+	"hero_role2": "Infrastructure and Devops",
+	"hero_role3": "QA and Test",
+	"hero_name": "Name",
+	"hero_education": "Education",
+	"hero_eduname": "B.eng. In Software Technology, SDU Odense",
+	"hero_experience": "Experience",
+	"hero_experience_content": "Fullstack Web Developer @ AirPlate",
+	"hero_location": "Location",
+	"hero_location_name": "Odense, Funen, Denmark",
+	"about_intro": "Hi! My name is <strong>Victor</strong> and I'm a passionate software engineering student from Odense. I'm studying for a B.Eng. in Software Technology at SDU, and work alongside my studies as a fullstack web developer at AirPlate, where I build modern web applications from end to end.",
+	"about_passion": "I'm passionate about building user-friendly and accessible solutions that combine a strong technical foundation with an eye for design. Whether it's a snappy REST API in Go or a responsive SvelteKit frontend with DaisyUI, I thrive where technology and design meet.",
+	"about_hobbies": "Outside of code, you'll probably find me with a cup of coffee, immersed in a new side project, or on the lookout for the next interesting problem to solve."
+}
