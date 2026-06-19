@@ -1,5 +1,5 @@
 <script>
-	import { getLocale, setLocale } from '$lib/paraglide/runtime';
+	import { getLocale, setLocale } from '$lib/paraglide/runtime.js';
 
 	let locale = $state(getLocale());
 

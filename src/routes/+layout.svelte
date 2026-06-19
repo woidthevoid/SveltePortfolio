@@ -2,18 +2,23 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import {fade} from 'svelte/transition';
-	import ThemeSwap from '$lib/ThemeSwap.svelte';
-	import LanguageSwap from '$lib/LanguageSwap.svelte';
+	import ThemeSwap from '$lib/components/ThemeSwap.svelte';
+	import LanguageSwap from '$lib/components/LanguageSwap.svelte';
 	import { Menu, ArrowUp } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 	import * as m from '$lib/paraglide/messages';
+	import '@fontsource/jetbrains-mono/400.css';
+	import '@fontsource/jetbrains-mono/600.css';
+	import '@fontsource/jetbrains-mono/700.css';
+	import '@fontsource/jetbrains-mono/800.css';
+
 	let { children } = $props();
 	let visible = $state(true);
 	let lastScrollY = $state(0);
 	let showScrollTop = $state(false);
 	let currentSection = $state(m.nav_about());
 
-	// TODO: Fix ThemeSwap to be small on mobile, navbar isnt full width on desktop
+	// TODO: navbar isnt full width on desktop
 	const links = [
 		{ href: '#about', label: m.nav_about() },
 		{ href: '#experience', label: m.nav_experience() },
@@ -42,7 +47,12 @@
 	<title>Victor Woydowski Dralle | {currentSection}</title>
 </svelte:head>
 
-<header class="fixed top-0 w-full z-50 transition-transform duration-300" id="header">
+<header
+	class="fixed top-0 z-50 w-full transition-transform duration-300 {visible
+		? 'translate-y-0'
+		: '-translate-y-full'}"
+	id="header"
+>
 
 	<div id="navbar" class="navbar glass">
 
@@ -84,7 +94,7 @@
 				{/each}
 			</ul>
 
-			<div id="theme-switch" class="btn btn-ghost lg:btn-small">
+			<div id="theme-switch" class="btn btn-ghost btn-sm sm:btn-md">
 				<ThemeSwap />
 			</div>
 
