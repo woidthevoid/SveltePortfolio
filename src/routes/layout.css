@@ -1,9 +1,16 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
-@plugin "daisyui" {
-    themes: corporate --default, business --prefersdark;
+@plugin 'daisyui' {
+	themes:
+		corporate --default,
+		business --prefersdark;
 }
 
 @theme {
 	--font-sans: 'JetBrains Mono', monospace;
+}
+
+/* Center the rotating role text under the hero help line */
+.text-rotate > * {
+	justify-items: center;
 }

@@ -1,4 +1,5 @@
 <script lang="ts">
+	// TODO: Rewrite about me section, add technologies i work with,
 	// @ts-ignore
 	import profile from '$lib/assets/me.JPG';
 	import { GraduationCap, User, MapPin, Briefcase } from '@lucide/svelte';
@@ -16,11 +17,15 @@
 		{ icon: Briefcase, title: m.hero_experience(), content: m.hero_experience_content() },
 		{ icon: MapPin, title: m.hero_location(), content: m.hero_location_name() }
 	];
-	const teckStack = [{ title: 'React' }, { title: 'Kubernetes' }];
 </script>
 
 <!--About section-->
-<section use:reveal={{ delay: 200 }} id="about" aria-labelledby="about-heading" class="px-4 py-16 sm:px-8">
+<section
+	use:reveal={{ delay: 200 }}
+	id="about"
+	aria-labelledby="about-heading"
+	class="px-4 py-16 sm:px-8"
+>
 	<h2 id="about-heading" class="mb-8 flex items-center gap-4 text-3xl font-extrabold">
 		{m.nav_about()}
 		<span class="h-px flex-1 bg-base-content/20" role="none"></span>
@@ -32,12 +37,23 @@
 			class="rounded-3xl bg-gradient-to-br from-primary to-secondary p-0.5 shadow-2xl shadow-primary/40"
 		>
 			<div class="rounded-[calc(1.5rem-2px)] bg-base-100 px-6 py-8 sm:px-10 sm:py-10">
-				<div class="w-full flex flex-col items-center gap-8 sm:flex-row sm:items-start">
+				<div class="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-start">
 					<div class="flex w-full shrink-0 flex-col items-center gap-6 sm:w-auto sm:items-start">
 						<!--Picture with tilting effect when hovered over, divs enable interactivity-->
-						<div class="hover-3d shrink-0" role="img" aria-label="Portræt af Victor Woydowski Dralle">
+						<div
+							class="hover-3d shrink-0"
+							role="img"
+							aria-label="Portrait of Victor Woydowski Dralle"
+						>
 							<figure class="w-56 rounded-2xl">
-								<img src={profile} alt="" class="h-full w-full rounded-full object-cover" />
+								<img
+									src={profile}
+									alt=""
+									width="224"
+									height="224"
+									loading="lazy"
+									class="h-full w-full rounded-full object-cover"
+								/>
 							</figure>
 							<div></div>
 							<div></div>
@@ -49,10 +65,10 @@
 							<div></div>
 						</div>
 
-						<ul class="w-52 self-start space-y-3 text-sm" aria-label="Fakta om Victor">
+						<ul class="w-52 space-y-3 self-start text-sm" aria-label="Facts about Victor">
 							{#each listContent as { icon: Icon, content, title } (title)}
 								<li>
-									<div class="flex flex-col gap-2 ">
+									<div class="flex flex-col gap-2">
 										<Icon size={16} aria-hidden="true" class="shrink-0 text-primary"></Icon>
 										<span class="font-semibold">{title}</span>
 									</div>
@@ -66,14 +82,6 @@
 						<p>{@html m.about_intro()}</p>
 						<p>{m.about_passion()}</p>
 						<p>{m.about_hobbies()}</p>
-
-						<div class="flex flex-row gap-4">
-							{#each teckStack as tech (tech.title)}
-								<div class="badge badge-primary">
-									{tech.title}
-								</div>
-							{/each}
-						</div>
 					</div>
 				</div>
 			</div>

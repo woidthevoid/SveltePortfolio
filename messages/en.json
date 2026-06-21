@@ -7,9 +7,11 @@
 	"hero_greeting1": "Hi, ",
 	"hero_greeting2": "I",
 	"hero_greeting3": "am",
+	"hero_help": "I can help you with: ",
 	"hero_role1": "Fullstack Web Development",
-	"hero_role2": "Infrastructure and Devops",
+	"hero_role2": "Infrastructure",
 	"hero_role3": "QA and Test",
+	"hero_role4": "DevOps",
 	"hero_name": "Name",
 	"hero_education": "Education",
 	"hero_eduname": "B.eng. In Software Technology, SDU Odense",
@@ -19,5 +21,11 @@
 	"hero_location_name": "Odense, Funen, Denmark",
 	"about_intro": "Hi! My name is <strong>Victor</strong> and I'm a passionate software engineering student from Odense. I'm studying for a B.Eng. in Software Technology at SDU, and work alongside my studies as a fullstack web developer at AirPlate, where I build modern web applications from end to end.",
 	"about_passion": "I'm passionate about building user-friendly and accessible solutions that combine a strong technical foundation with an eye for design. Whether it's a snappy REST API in Go or a responsive SvelteKit frontend with DaisyUI, I thrive where technology and design meet.",
-	"about_hobbies": "Outside of code, you'll probably find me with a cup of coffee, immersed in a new side project, or on the lookout for the next interesting problem to solve."
+	"about_hobbies": "Outside of code, you'll probably find me with a cup of coffee, immersed in a new side project, or on the lookout for the next interesting problem to solve.",
+	"hero_positions": "I'm currently looking for new adventures in roles involving DevOps, Cloud, Infrastructure and Web Development",
+	"resume_button": "Download my resume here!",
+	"experience_title": "[\"Fullstack Web Developer\", \"Engineer Intern\"]",
+	"experience_summary": "[\"Built and maintained modern full-stack web applications end to end — developing React and TypeScript frontends and Express APIs backed by MySQL, and setting up CI/CD pipelines with GitHub Actions.\", \"Contributed to AirPlate's web platform as an engineering intern — building features in React and TypeScript, integrating Firebase and Stripe, and testing APIs with Postman.\"]",
+	"experience_period": "[\"March 2025 - July 2025\", \"March 2024 - August 2024\"]",
+	"experience_tech_badges": "Technologies I used here: "
 }

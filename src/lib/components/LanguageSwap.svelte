@@ -14,7 +14,7 @@
 <button
 	type="button"
 	onclick={toggleLocale}
-	class="btn btn-ghost btn-circle text-xl"
+	class="btn btn-circle text-xl btn-ghost"
 	aria-label="Switch language between Danish and English"
 >
 	{flags[locale]}

@@ -7,9 +7,11 @@
 	"hero_greeting1": "Hej, ",
 	"hero_greeting2": "jeg",
 	"hero_greeting3": "hedder",
+	"hero_help": "Jeg kan hjælpe dig med: ",
 	"hero_role1": "Fullstack Webudvikling",
-	"hero_role2": "Infrakstruktur og Devops",
+	"hero_role2": "Infrastruktur",
 	"hero_role3": "QA og Test",
+	"hero_role4": "DevOps",
 	"hero_name": "Navn",
 	"hero_education": "Uddannelse",
 	"hero_eduname": "Diplomingeniør i Softwareteknologi, SDU Odense",
@@ -21,5 +23,9 @@
 	"about_passion": "Jeg brænder for at skabe brugervenlige og tilgængelige løsninger, der kombinerer et stærkt teknisk fundament med et æstetisk blik. Hvad enten det er en snappy REST API i Go eller et responsivt SvelteKit-frontend med DaisyUI, trives jeg bedst når teknologi og design mødes.",
 	"about_hobbies": "Uden for koden finder du mig sandsynligvis med en kop kaffe, fordybet i et nyt sideprojekt eller på udkig efter det næste spændende problem at løse.",
 	"hero_positions": "Jeg er pt. på udkig efter nye eventyr i form af roller som indeholder DevOps, Cloud, Infrastruktur og Webudvikling",
-	"resume_button": "Dowload mit CV her!"
+	"resume_button": "Download mit CV her!",
+	"experience_title": "[\"Fullstack Web Udvikler\", \"Ingeniør Praktikant\"]",
+	"experience_summary": "[\"Byggede og vedligeholdt moderne full-stack webapplikationer fra ende til ende — udviklede frontends i React og TypeScript samt Express-API'er med MySQL, og opsatte CI/CD-pipelines med GitHub Actions.\", \"Bidrog til AirPlates webplatform som ingeniørpraktikant — byggede funktioner i React og TypeScript, integrerede Firebase og Stripe, og testede API'er med Postman.\"]",
+	"experience_period": "[\"marts 2025 - juli 2025\", \"marts 2024 - august 2024\"]",
+	"experience_tech_badges": "Teknologier jeg har brugt her: "
 }
