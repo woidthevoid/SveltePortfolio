@@ -16,7 +16,7 @@
 	"hero_education": "Uddannelse",
 	"hero_eduname": "Diplomingeniør i Softwareteknologi, SDU Odense",
 	"hero_experience": "Erfaring",
-	"hero_experience_content": "Fullstack Webudvikler @ AirPlate",
+	"hero_experience_content": "Tidligere Fullstack Webudvikler @ AirPlate",
 	"hero_location": "Lokation",
 	"hero_location_name": "Odense, Fyn, Danmark",
 	"about_intro": "Hej og tak for at kigge forbi! Mit navn er Victor, men det vidste du nok allerede ud fra titlen :) Jeg er uddannet softwareingeniør med erfaring i Fullstack Webudvikling fra en mindre startup og jeg søger aktivt efter mit næste nye tech eventyr lol",
@@ -25,7 +25,8 @@
 	"hero_positions": "Jeg er pt. på udkig efter nye eventyr i form af roller som indeholder DevOps, Cloud, Infrastruktur og Webudvikling",
 	"resume_button": "Download mit CV her!",
 	"experience_title": "[\"Fullstack Web Udvikler\", \"Ingeniør Praktikant\"]",
-	"experience_summary": "[\"Byggede og vedligeholdt moderne full-stack webapplikationer fra ende til ende — udviklede frontends i React og TypeScript samt Express-API'er med MySQL, og opsatte CI/CD-pipelines med GitHub Actions.\", \"Bidrog til AirPlates webplatform som ingeniørpraktikant — byggede funktioner i React og TypeScript, integrerede Firebase og Stripe, og testede API'er med Postman.\"]",
+	"experience_link": "https://airplate.dk",
+	"experience_summary": "[\"Fullstack videreudvikling af hovedprodukt, DevOps indfasning og implementering af GitHub Actions, håndtering af infrastruktur og database, test design og implementering samt rådgivning og samarbejde med CTO og CEO.\", \"Fullstack webudvikling, integrering af data i Mapbox fra WebSockets og eksterne APIer, udarbejdelse af webshop med Stripe og Shipmondo integrationer, OAuth implementering med Firebase.\"]",
 	"experience_period": "[\"marts 2025 - juli 2025\", \"marts 2024 - august 2024\"]",
-	"experience_tech_badges": "Teknologier jeg har brugt her: "
+	"experience_tech_badges": "Hvad jeg har arbejdet med: "
 }

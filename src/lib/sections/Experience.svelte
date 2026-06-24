@@ -14,7 +14,8 @@
 		SiStripe,
 		SiPostman,
 		SiJest,
-		SiDigitalocean
+		SiDigitalocean,
+		SiMapbox
 	} from '@icons-pack/svelte-simple-icons';
 
 	const techIcons: Record<string, Component<{ size?: number; color?: string; title?: string }>> = {
@@ -28,7 +29,8 @@
 		Postman: SiPostman,
 		Stripe: SiStripe,
 		Jest: SiJest,
-		DigitalOcean: SiDigitalocean
+		DigitalOcean: SiDigitalocean,
+		Mapbox: SiMapbox
 	};
 
 	const experienceTitle: string[] = JSON.parse(m.experience_title());
@@ -39,6 +41,7 @@
 			logo: airplate,
 			role: experienceTitle[0],
 			company: 'AirPlate',
+			website: m.experience_link(),
 			period: experiencePeriod[0],
 			summary: experienceSummary[0],
 			tech: [
@@ -56,9 +59,10 @@
 			logo: airplate,
 			role: experienceTitle[1],
 			company: 'AirPlate',
+			website: m.experience_link(),
 			period: experiencePeriod[1],
 			summary: experienceSummary[1],
-			tech: ['React', 'TypeScript', 'Tailwind', 'Express', 'Firebase', 'Stripe', 'Postman']
+			tech: ['React', 'TypeScript', 'Tailwind', 'Express', 'MySQL', 'Firebase', 'Stripe', 'Postman', 'Mapbox']
 		}
 	];
 </script>
@@ -73,8 +77,8 @@
 		<span class="h-px flex-1 bg-base-content/20" role="none"></span>
 	</h2>
 
-	<ul class="mx-auto flex max-w-4xl flex-col gap-6" aria-label={m.nav_experience()}>
-		{#each experiences as { logo, role, company, period, summary, tech }, i (role)}
+	<ul class="mx-auto flex max-w-5xl flex-col gap-6" aria-label={m.nav_experience()}>
+		{#each experiences as { logo, role, company, website, period, summary, tech }, i (role)}
 			<li
 				use:reveal={{ delay: i * 150 }}
 				class="group rounded-2xl bg-gradient-to-br from-primary to-secondary p-0.5 shadow-lg shadow-primary/30 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40"
@@ -91,7 +95,7 @@
 						/>
 						<div class="min-w-0 flex-1">
 							<h3 class="text-lg font-bold sm:text-xl">{role}</h3>
-							<p class="text-sm text-base-content/70">{company}</p>
+							<a href={website} target="_blank" class="text-sm text-base-content/70 underline">{company}</a>
 							<p class="text-xs text-base-content/50">{period}</p>
 						</div>
 					</header>

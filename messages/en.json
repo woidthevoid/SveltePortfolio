@@ -16,7 +16,7 @@
 	"hero_education": "Education",
 	"hero_eduname": "B.eng. In Software Technology, SDU Odense",
 	"hero_experience": "Experience",
-	"hero_experience_content": "Fullstack Web Developer @ AirPlate",
+	"hero_experience_content": "Previously Fullstack Web Developer @ AirPlate",
 	"hero_location": "Location",
 	"hero_location_name": "Odense, Funen, Denmark",
 	"about_intro": "Hi! My name is <strong>Victor</strong> and I'm a passionate software engineering student from Odense. I'm studying for a B.Eng. in Software Technology at SDU, and work alongside my studies as a fullstack web developer at AirPlate, where I build modern web applications from end to end.",
@@ -25,7 +25,7 @@
 	"hero_positions": "I'm currently looking for new adventures in roles involving DevOps, Cloud, Infrastructure and Web Development",
 	"resume_button": "Download my resume here!",
 	"experience_title": "[\"Fullstack Web Developer\", \"Engineer Intern\"]",
-	"experience_summary": "[\"Built and maintained modern full-stack web applications end to end — developing React and TypeScript frontends and Express APIs backed by MySQL, and setting up CI/CD pipelines with GitHub Actions.\", \"Contributed to AirPlate's web platform as an engineering intern — building features in React and TypeScript, integrating Firebase and Stripe, and testing APIs with Postman.\"]",
+	"experience_summary": "[\"Fullstack further development of the main product, DevOps onboarding and implementation of GitHub Actions, management of infrastructure and database, test design and implementation, as well as advising and collaborating with the CTO and CEO.\", \"Fullstack web development, integrating data into Mapbox from WebSockets and external APIs, building a webshop with Stripe and Shipmondo integrations, OAuth implementation with Firebase.\"]",
 	"experience_period": "[\"March 2025 - July 2025\", \"March 2024 - August 2024\"]",
 	"experience_tech_badges": "Technologies I used here: "
 }
